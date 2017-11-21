@@ -1,0 +1,174 @@
+% A beamer poster style for the University of Oxford. Atilim Gunes Baydin <gunes@robots.ox.ac.uk>, November 2016.
+% Based on the I6pd2 style created by Thomas Deselaers an Philippe Dreuw.
+\ProvidesPackage{beamerthemeOxford}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \RequirePackage{tangocolors}
+\RequirePackage{wrapfig}
+%\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{lightgrey}{rgb}{0.95,0.95,0.95} % Defines the color used for content box headers
+\definecolor{bluetinge}{rgb}{0.9,0.95,1}
+\definecolor{oxfordblue}{RGB}{0,33,71} % Pantone 282, Hex #002147, RGB 0 33 71, CMYK 100 80 0 60
+\definecolor{darkgreen}{rgb}{0,.4,0}
+
+\setbeamercolor{headline}{fg=oxfordblue,bg=oxfordblue}
+\setbeamercolor{footline}{fg=oxfordblue,bg=white}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=white}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=white}
+\setbeamercolor{institute in headline}{fg=white}
+
+\setbeamercolor{framesubtitle}{fg=white, bg=oxfordblue}
+\setbeamercolor{author in head/foot}{fg=white, bg=oxfordblue}
+\setbeamercolor{title in head/foot}{fg=white, bg=oxfordblue}
+
+\setbeamercolor*{normal text}{fg=black, bg=white}
+\setbeamercolor*{block body}{bg=lightgrey,fg=oxfordblue}
+\setbeamercolor*{block title}{fg=white,bg=oxfordblue}
+\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamercolor{upper separation line head}{fg=oxfordblue}
+
+\setbeamercolor*{example body}{fg=lightgrey,bg=oxfordblue}
+\setbeamercolor*{example text}{fg=lightgrey,bg=oxfordblue}
+\setbeamercolor*{example title}{bg=white,fg=ta2gray}
+
+%\setbeamercolor{alerted text}{fg=ta3gray}
+
+%\setbeamercolor{example text}{fg=taorange}
+\setbeamercolor{structure}{fg=oxfordblue}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}%
+    \vspace{-7pt}
+    {\hspace{-21pt}\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[leftskip=10pt,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+    \justifying
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.015\paperwidth}
+      \end{column}
+      \begin{column}{.71\paperwidth}
+        \vskip4ex
+         \vspace{20pt}
+        \raggedright
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+        \vspace{20pt}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \vspace{-5pt}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}   
+        \vspace{0pt}
+      \end{column}
+      \begin{column}{.226\paperwidth}
+        \vskip11ex
+        \vspace{-30pt}
+        \begin{center}
+         \hfill
+          \includegraphics[height=9cm]{ox_brand_cmyk_rev.pdf}
+          %\begin{wrapfigure}{r}{0.35\linewidth}
+            %\colorbox{white}{\includegraphics[width=.35\linewidth]{LiU_primary_black}} \\
+            %\includegraphics[width=.35\linewidth]{uppsalalogo.png}
+          %\end{wrapfigure}
+        \end{center}
+        \vskip2ex
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+    \vskip2ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+}
+
+%  \setbeamertemplate{headline}{  
+%    \leavevmode
+%    \begin{beamercolorbox}[sep=0.5cm,wd=.8\paperwidth]{headline}
+%      \usebeamercolor{title in headline}{\raggedleft\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%      \usebeamercolor{author in headline}{\raggedleft\color{fg}\large{\insertauthor}\\[1ex]}
+%      \usebeamercolor{institute in headline}{\raggedleft\color{fg}\large{\insertinstitute}\\[1ex]}     
+%    \end{beamercolorbox}%
+%    \begin{beamercolorbox}[wd=.2\paperwidth]{logo in headline}
+%      \centering
+%      \LARGE{LOGO}
+%    \end{beamercolorbox}  
+
+
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+%  \begin{beamercolorbox}[ht=2ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+%    \texttt{\leftfoot}
+%    \hfill
+%    \texttt{\rightfoot}
+%    \vskip1ex
+%  \end{beamercolorbox}
+  %\vskip0pt%
+  %\begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+  %  \rule{0pt}{3pt}
+  %\end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+%\beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+% adapt height of imtemize rectangles
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip0.1em}
+% or define your own template using \defbeamertemplate{itemize item}, see beameruserguide.pdf
+
+% equal font sizes for all levels
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster-surf"
+%%% End: 
+
+% set bibliography style
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=black}
+\setbeamercolor{bibliography entry author}{fg=black,bg=black}
+\setbeamercolor{bibliography item}{fg=black,bg=black}
+
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}

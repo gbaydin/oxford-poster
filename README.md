@@ -7,8 +7,11 @@ Defaults to A0 size. Needs a bit of clean up and tweaking.
 
 Based on the [latex-beamerposter](https://github.com/deselaers/latex-beamerposter) package by Philippe Dreuw and Thomas Deselaers.
 
-### Example:
+### Example
+
+#### Landscape
+
 ![landscape](https://github.com/gbaydin/oxford-poster/raw/master/oxford_poster_landscape.png)
 
-
+#### Portrait
 ![portrait](https://github.com/gbaydin/oxford-poster/raw/master/oxford_poster_portrait.png)

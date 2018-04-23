@@ -6,3 +6,6 @@ Atılım Güneş Baydin <gunes@robots.ox.ac.uk>, November 2016.
 Defaults to A0 size. Needs a bit of clean up and tweaking.
 
 Based on the [latex-beamerposter](https://github.com/deselaers/latex-beamerposter) package by Philippe Dreuw and Thomas Deselaers.
+
+### Example:
+![screenshot](https://github.com/gbaydin/oxford-poster/raw/master/oxford_poster.png)

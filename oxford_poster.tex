@@ -24,7 +24,7 @@
 
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 
-\usepackage[orientation=portrait,size=a0,scale=1.3]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
+\usepackage[orientation=landscape,size=a0,scale=1.3]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
 
 \usetheme{Oxford}
 
@@ -70,11 +70,16 @@
 
 \begin{frame}[t] % The whole poster is enclosed in one beamer frame
 
-\begin{columns}[t] % The whole poster consists of two major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
+\begin{columns}[t] % The whole poster consists of three major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
 
-  \begin{column}{.025\textwidth}\end{column} % Empty spacer column
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
 
-  \begin{column}{.47\textwidth} % The first column
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{column}{.3\textwidth} % 1st column
+
     \vspace{\shrink}          
     \begin{block}{Overview}
       \begin{itemize}
@@ -88,11 +93,15 @@
     \begin{block}{Another block}
       Block text \cite{le-2016-inference-compilation}...
     \end{block}
-  \end{column} % End of the first column
+  \end{column} % End of the 1st column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \begin{column}{.02\textwidth}\end{column} % Empty spacer column
-   
-  \begin{column}{.47\textwidth} % The second column
+
+  \begin{column}{.3\textwidth} % 2nd column
     \vspace{\shrink}
     \begin{block}{Method}
       \textbf{Method details.} We formulate... $\mathcal S = \{s_1, s_2, s_3, s_4, s_5, s_6 \}$
@@ -102,6 +111,16 @@
         \includegraphics[width=0.9\columnwidth]{ox_brand_cmyk_rev}
       \end{center}
     \end{block}
+
+  \end{column} % End of the 2nd column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Column 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+  \begin{column}{.3\textwidth} % 3rd column
 
     \begin{block}{Results}
       Results...
@@ -113,7 +132,8 @@
       \footnotesize{\bibliographystyle{unsrt}
       \bibliography{oxford_poster}}
     \end{block}
-  \end{column} % End of the second column
+
+  \end{column} % End of the 3rd column
 
   \begin{column}{.02\textwidth}\end{column} % Empty spacer column
 
